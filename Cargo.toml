@@ -1,0 +1,126 @@
+[package]
+name = "atlas-ai-agent"
+version = "0.1.0"
+edition = "2021"
+authors = ["兩岸聯速人工智能研究院 / 阿忒拉斯(深圳)智能科技有限公司"]
+license = "MIT"
+description = "Atlas AI Agent - High-performance AI assistant framework with neural memory system"
+repository = "https://github.com/Atlas-AIOS/Atlas-AI-Agent"
+readme = "README.md"
+keywords = ["ai", "agent", "assistant", "chatbot", "memory", "neural"]
+categories = ["command-line-utilities", "api-bindings"]
+
+[dependencies]
+# CLI framework
+clap = { version = "4.5", features = ["derive"] }
+
+# Async runtime - optimized for size
+tokio = { version = "1.42", default-features = false, features = ["rt-multi-thread", "macros", "time", "net", "io-util", "sync", "process", "io-std", "fs", "signal"] }
+
+# HTTP client
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "blocking", "multipart", "stream"] }
+
+# Serialization
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+serde_json = { version = "1.0", default-features = false, features = ["std"] }
+
+# Configuration
+directories = "5.0"
+toml = "0.8"
+shellexpand = "3.1"
+
+# Logging
+tracing = { version = "0.1", default-features = false }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "ansi"] }
+
+# Observability
+prometheus = { version = "0.13", default-features = false }
+
+# Encoding
+base64 = "0.22"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "2.0"
+
+# UUID generation
+uuid = { version = "1.11", default-features = false, features = ["v4", "std"] }
+
+# Cryptography
+chacha20poly1305 = "0.10"
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+rand = "0.8"
+
+# Async traits
+async-trait = "0.1"
+
+# Memory / persistence
+rusqlite = { version = "0.32", features = ["bundled"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std", "serde"] }
+cron = "0.12"
+
+# Interactive CLI
+dialoguer = { version = "0.11", features = ["fuzzy-select"] }
+console = "0.15"
+
+# WebSocket support
+tokio-tungstenite = { version = "0.24", features = ["rustls-tls-webpki-roots"] }
+futures-util = { version = "0.3", default-features = false, features = ["sink"] }
+
+# Network utilities
+hostname = "0.4.2"
+
+# Email support
+lettre = { version = "0.11.19", default-features = false, features = ["builder", "smtp-transport", "rustls-tls"] }
+mail-parser = "0.11.2"
+
+# TLS
+rustls = "0.23"
+rustls-pki-types = "1.14.0"
+tokio-rustls = "0.26.4"
+webpki-roots = "1.0.6"
+
+# HTTP server
+axum = { version = "0.7", default-features = false, features = ["http1", "json", "tokio", "query"] }
+tower = { version = "0.5", default-features = false }
+tower-http = { version = "0.6", default-features = false, features = ["limit", "timeout"] }
+http-body-util = "0.1"
+
+# OpenTelemetry
+opentelemetry = { version = "0.31", default-features = false, features = ["trace", "metrics"] }
+opentelemetry_sdk = { version = "0.31", default-features = false, features = ["trace", "metrics"] }
+opentelemetry-otlp = { version = "0.31", default-features = false, features = ["trace", "metrics", "http-proto", "reqwest-blocking-client"] }
+
+# URL encoding
+urlencoding = "2.1"
+
+# LRU cache for performance optimization
+lru = "0.12"
+
+# Python FFI for Atlas memory (optional)
+# pyo3 = { version = "0.21", features = ["auto-initialize"] }
+
+# Python FFI for Atlas memory (optional, can use subprocess instead)
+# pyo3 = { version = "0.21", features = ["auto-initialize"] }
+# Note: pyo3 requires Python development headers, using subprocess for now
+
+[profile.release]
+opt-level = "z"      # Optimize for size
+lto = true          # Link-time optimization
+codegen-units = 1   # Better optimization
+strip = true        # Remove debug symbols
+panic = "abort"     # Reduce binary size
+
+[profile.dist]
+inherits = "release"
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3.14"

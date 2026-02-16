@@ -1,0 +1,14 @@
+[agent]
+# Options: atlas, openai, google, claude, glm, kimi, qwen, deepseek, openrouter
+provider = "openrouter"
+model = "anthropic/claude-sonnet-4-20250514"
+# Prefer environment variable, but config key is supported
+api_key = "your_openrouter_api_key"
+
+[memory]
+backend = "sqlite"
+db_path = "atlas_agent.db"
+
+[gateway]
+port = 8080
+require_auth = true

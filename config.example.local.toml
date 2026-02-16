@@ -1,0 +1,15 @@
+[agent]
+provider = "local"
+model = "qwen2.5"
+
+[agent.local_model]
+api_endpoint = "http://localhost:11434"
+api_type = "ollama"
+
+[memory]
+backend = "sqlite"
+db_path = "atlas_agent.db"
+
+[gateway]
+port = 8080
+require_auth = true
