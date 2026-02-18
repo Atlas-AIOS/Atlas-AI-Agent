@@ -896,9 +896,28 @@ Dedicated to promoting cross-strait AI technology exchange and cooperation, focu
 ### 阿忒拉斯(深圳)智能科技有限公司
 **Atlas (Shenzhen) Intelligent Technology Co., Ltd.**
 
-專注於 AI 助手框架、智能記憶系統、企業級 AI 解決方案的研發與應用。
+**核心定位 / Core Mission**：  
+**為 AI 打造下一代數值架構與算力引擎**  
+**Building the next generation numerical architecture and computing engine for AI**
 
-Focused on the research, development, and application of AI assistant frameworks, intelligent memory systems, and enterprise-grade AI solutions.
+**主要業務領域 / Main Business Areas**：
+
+1. **AI 操作系統與人格基礎設施 / AI Operating System and Personality Infrastructure**  
+   Atlas World / Atlas OS
+   - 提供完整的 AI 操作系統架構 / Complete AI operating system architecture
+   - 構建 AI 人格的基礎設施平台 / Infrastructure platform for AI personalities
+
+2. **大模型訓練與推理的算力效率優化 / Computational Efficiency Optimization for Large Model Training and Reasoning**  
+   數值算法 + 編譯器 + 硬件協同 / Numerical algorithms + compilers + hardware collaboration
+   - 從算法層到硬件層的全棧優化方案 / Full-stack optimization from algorithms to hardware
+
+3. **GPU / AI 加速卡性能調優與成本降低方案 / GPU / AI Accelerator Performance Tuning and Cost Reduction Solutions**
+   - 針對 GPU 和 AI 加速卡的深度優化 / Deep optimization for GPUs and AI accelerators
+   - 提供成本效益優化方案 / Cost-effective optimization solutions
+
+4. **企業級 AI 系統架構顧問與聯合研發 / Enterprise-Level AI System Architecture Consulting and Joint R&D**
+   - 為企業提供 AI 系統架構諮詢服務 / AI system architecture consulting for enterprises
+   - 與企業進行聯合研發合作 / Joint R&D collaboration with enterprises
 
 ---
 
