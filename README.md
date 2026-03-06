@@ -190,7 +190,7 @@ ECTROXClaw
 │   ├── Causal Memory Engine
 │   └── Security Sandbox
 ├── Adapters
-│   ├── Model Router (OpenAI/Claude/文心/通义)
+│   ├── Model Router (OpenAI/Claude/Qwen / DeepSeek / Kimi)
 │   ├── Platform Hub (8 platforms)
 │   └── Automation Layer
 ├── AXI Integration
